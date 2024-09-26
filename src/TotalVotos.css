@@ -8,12 +8,12 @@
 }
 
 .total-votes h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #333;
 }
 
 .total-votes p {
-  font-size: 3rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #007bff;
   margin: 0;

@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
-
-const VotosIndividuales = ({ votes, statType }) => {
+import { useVoting } from "./VotingContext";
+const VotosIndividuales = () => {
+  const { votes, statType } = useVoting();
   const totalVotes = Object.values(votes).reduce(
     (sum, voteCount) => sum + voteCount,
     0
@@ -34,11 +34,6 @@ const VotosIndividuales = ({ votes, statType }) => {
       {totalVotes > 0 ? renderStatistics() : <p>Aún no hay votos.</p>}
     </div>
   );
-};
-
-VotosIndividuales.propTypes = {
-  votes: PropTypes.objectOf(PropTypes.number).isRequired,
-  statType: PropTypes.string.isRequired,
 };
 
 export default VotosIndividuales;

@@ -1,17 +1,14 @@
-import PropTypes from "prop-types";
-import "./TotalVotos.css";
+import { useVoting } from "./VotingContext"; // Importa el contexto
 
-const TotalVotos = ({ total }) => {
+const TotalVotos = () => {
+  const { totalVotes } = useVoting(); // Usa el contexto
+
   return (
     <div className="total-votes">
       <h1>Total de Votos</h1>
-      <p>{total}</p>
+      <p>{totalVotes}</p>
     </div>
   );
-};
-
-TotalVotos.propTypes = {
-  total: PropTypes.number.isRequired,
 };
 
 export default TotalVotos;

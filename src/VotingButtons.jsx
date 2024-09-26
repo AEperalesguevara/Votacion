@@ -1,6 +1,8 @@
-import PropTypes from "prop-types";
+import { useVoting } from "./VotingContext";
 
-const VotingButtons = ({ handleVote }) => {
+const VotingButtons = () => {
+  const { handleVote } = useVoting();
+
   return (
     <div>
       <h2>Vote por su candidato:</h2>
@@ -11,9 +13,4 @@ const VotingButtons = ({ handleVote }) => {
     </div>
   );
 };
-
-VotingButtons.propTypes = {
-  handleVote: PropTypes.func.isRequired,
-};
-
 export default VotingButtons;

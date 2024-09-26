@@ -1,6 +1,8 @@
-import PropTypes from "prop-types";
+import { useVoting } from "./VotingContext";
 
-const Filtro = ({ statType, setStatType }) => {
+const Filtro = () => {
+  const { statType, setStatType } = useVoting();
+
   return (
     <div>
       <h2>Mostrar estadísticas:</h2>
@@ -13,8 +15,4 @@ const Filtro = ({ statType, setStatType }) => {
   );
 };
 
-Filtro.propTypes = {
-  statType: PropTypes.string.isRequired,
-  setStatType: PropTypes.func.isRequired,
-};
 export default Filtro;
